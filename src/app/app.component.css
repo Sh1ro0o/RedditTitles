@@ -1,0 +1,53 @@
+.button-option {
+  display: inline-block;
+  padding: 5px 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 15%;
+  margin-right: 1%;
+}
+
+.button-option:hover {
+  border-color: white;
+  border-radius: 15%;
+  background-color:rgb(56, 56, 56);
+}
+
+.button-refresh {
+  display: inline-block;
+  padding: 5px 20px;
+  text-align: center;
+  background-color: rgb(224, 224, 224);
+  color: black;
+  border-radius: 15%;
+  margin-right: 1%;
+}
+
+.button-refresh:hover {
+  border-color: honeydew;
+}
+
+.title-container {
+  padding: 1%;
+  margin: 1%;
+  border:black;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.button-container {
+  margin: 1%;
+}
+
+.loading-animation {
+  text-align: center;
+  padding: 1%;
+  animation: loadingAnimation 3s infinite;
+}
+
+@keyframes loadingAnimation {
+  0%  {color:black;}
+  50% {color: white;}
+  100%{color: white;}
+}

@@ -1,6 +1,16 @@
-<h1>Initial setup.</h1>
+<h1 style="color: rgba(247, 95, 7, 0.733); margin-left: 1%;">Front page of Reddit</h1>
+<div class="button-container">
+  <button class="button-option" (click)="decidedSearch = 'new'; getPosts(decidedSearch)">NEW</button>
+  <button class="button-option" (click)="decidedSearch = 'hot'; getPosts(decidedSearch)">HOT</button>
+  <button class="button-option" (click)="decidedSearch = 'top'; getPosts(decidedSearch)">TOP</button>
+  <button class="button-refresh" (click)="getPosts(decidedSearch)">Refresh</button>
+</div>
 
-<button (click)="getPosts()">Get Posts</button>
-<div *ngFor="let post of posts | async">
-  <h1>{{ post | json }}</h1>
+<h1 *ngIf="loading">
+  <div class="loading-animation">Loading...</div>
+</h1>
+<div *ngIf="!loading">
+  <div class="title-container" *ngFor="let post of posts">
+    <h1>{{ post.data.title }}</h1>
+  </div>
 </div>
