@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   posts: any;
   decidedSearch = "hot"
 
-  async getPosts(search: "hot" | "new" = "hot") {
+  async getPosts(search: ("hot" | "new" | "top") = "hot") {
     this.loading = true;
     try {
       const response = await fetch(`https://www.reddit.com/${search}/.json`);
