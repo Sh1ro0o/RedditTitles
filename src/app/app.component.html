@@ -1,1 +1,6 @@
 <h1>Initial setup.</h1>
+
+<button (click)="getPosts()">Get Posts</button>
+<div *ngFor="let post of posts | async">
+  <h1>{{ post | json }}</h1>
+</div>

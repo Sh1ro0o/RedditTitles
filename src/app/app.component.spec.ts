@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'mean-course'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('mean-course');
+    expect(app.title).toEqual('Reddit Titles');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('mean-course app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('reddit Titles app is running!');
   });
 });

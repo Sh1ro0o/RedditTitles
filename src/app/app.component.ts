@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mean-course';
+  title = "Reddit Titles";
+  readonly ROOT_URL = 'https://jsonplaceholder.typicode.com/posts';
+  posts: any;
+
+  constructor(private http: HttpClient) { }
+
+  getPosts() {
+    this.posts = this.http.get(this.ROOT_URL)
+  }
 }
