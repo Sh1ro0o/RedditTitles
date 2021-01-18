@@ -1,9 +1,9 @@
 <h1 style="color: rgba(247, 95, 7, 0.733); margin-left: 1%;">Front page of Reddit</h1>
 <div class="button-container">
-  <button class="button-option" (click)="decidedSearch = 'new'; getPosts(decidedSearch)">NEW</button>
-  <button class="button-option" (click)="decidedSearch = 'hot'; getPosts(decidedSearch)">HOT</button>
-  <button class="button-option" (click)="decidedSearch = 'top'; getPosts(decidedSearch)">TOP</button>
-  <button class="button-refresh" (click)="getPosts(decidedSearch)">Refresh</button>
+  <button class="button-option" (click)="setDecidedSearchAndGetPosts('new')">NEW</button>
+  <button class="button-option" (click)="setDecidedSearchAndGetPosts('hot')">HOT</button>
+  <button class="button-option" (click)="setDecidedSearchAndGetPosts('top')">TOP</button>
+  <button class="button-refresh" (click)="getPosts()">Refresh</button>
 </div>
 
 <h1 *ngIf="loading">
